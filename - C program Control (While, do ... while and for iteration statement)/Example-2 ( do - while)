@@ -1,0 +1,13 @@
+#include<stdio.h>//Do-While loop*/
+int main ()
+{
+int k=0;
+do
+ {
+ printf("k=%d ",k); // k=0 k=1 k=2 k=3
+ k++;
+ }
+while (k <=3);
+ printf("\nk=%d(Do While loop output) ",k); // k=4(do while loop output)
+return 0;
+}
