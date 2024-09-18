@@ -1,0 +1,25 @@
+/*
+Q7: Write a program that prints the digits in each digit of the 4-digit number entered by the user in
+order of digits 
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int num,a,b,c,d;
+    printf("Enter a 4 digit number: "); //Enter a 4 digit number: 4769
+    scanf("%d", &num);
+    
+    a=num/1000;
+    b=(num/100)%10;
+    c=(num%100)/10;
+    d=(num%100)%10;
+    
+    printf("Your thousands digit is: %d \n", a); //Your thousands digit is: 4
+    printf("Your hundreds digit is: %d \n", b); //Your hundreds digit is: 7 
+    printf("Your tens digit is: %d \n", c); //Your tens digit is: 6
+    printf("Your ones digit is: %d \n", d); //Your ones digit is: 9 
+    
+    return 0;
+}
