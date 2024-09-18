@@ -1,0 +1,11 @@
+#include<stdio.h>
+ int main()
+ {
+int a , s;
+ printf ("Enter one integer number: "); // Enter one integer number : 4
+ scanf("%d ",&a); // scanf("%d ",&a); try leaving a space after %d
+ s = a*a ;
+ printf("Number of square :%d\n", s); // Number of square :16
+
+return 0;
+ }
