@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main() {
+ int number;
+ printf("enter a number: ");
+ scanf("%d",&number);// number=1 ise number=2 ise number=4 ise
+ switch (number) {
+ case 1:
+ printf("Number : 1 \n");// Number : 1
+
+ case 2:
+ printf("Number : 2 \n");// Number : 2 Number : 2
+ break;
+ case 3:
+ printf("Number : 3 \n");
+ break;
+ default:
+ printf(" The number is different from 1,2,3\n"); // The number is different from 1,2,3
+ }
+
+
+}
