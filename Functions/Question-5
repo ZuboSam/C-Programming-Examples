@@ -1,0 +1,36 @@
+/*
+Q5: A parking lot business charges a minimum of 2₺ for parks made up to 3 hours. If 3 hours are
+exceeded, 0.5 TL is charged for each hour. The maximum amount taken is 10 TL in case of parking for
+24 hours. Assume that no vehicle is parked for more than 24 hours. Write a program that calculates
+the payments of 3 customers who parked in this parking lot yesterday in a function and prints them
+in the main program. (The user must enter the parking time of each customer and the output should
+be in neat tabular form and program should calculate their total revenue). The program has to
+calculate the fee for each customer in a function called calculatepayment.(1st customer is 1.5 hours,
+2nd customer is 4 hours, 3rd customer is 24 hours left)
+*/
+
+#include &lt;stdio.h&gt;
+
+float calculatepayment(int t)
+{
+float price;
+if(t&lt;=3)
+price=2;
+else if(t&gt;16)
+price=10;
+else
+price= 2+(t-3)*0.5;
+return price;
+}
+
+int main()
+{
+float hour;
+for(int i=1;i&lt;=3;i++)
+{
+printf(&quot;Enter your %d. car parking time:&quot;, i);
+scanf(&quot;%f&quot;,&amp;hour);
+
+printf(&quot;Your costumer has to pay %.1f liras \n&quot;, calculatepayment(hour));
+}
+}
