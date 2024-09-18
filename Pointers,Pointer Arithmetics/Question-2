@@ -1,0 +1,23 @@
+/*
+Q2: The user enters 3 integers. You find the product and the sum of the squares of these numbers in
+a single function and write them in the main program.
+*/
+
+#include &lt;stdio.h&gt;
+
+int three(int a,int b,int c,int *product,int *sum)
+{
+*product=a*b*c;
+*sum=a*a+b*b+c*c;
+}
+
+int main()
+{
+int a,b,c,product,sum;
+printf(&quot;Enter 3 integers: &quot;);
+scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c);
+three(a,b,c,&amp;product,&amp;sum);
+printf(&quot;Product of these number is %d\nSum of the squares of these numbers is= %d&quot;,
+product,sum);
+
+}
