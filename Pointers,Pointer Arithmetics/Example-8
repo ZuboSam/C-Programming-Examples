@@ -1,0 +1,14 @@
+#include<stdio.h>
+int cube(int *nPtr);
+int main(void)
+{
+int number = 2; // initialize number
+ printf("The original value of number is %d", number); //The original value of number is 2
+ cube(&number);
+ printf("\nThe new value of number is %d\n", number);//The new value of number is 8
+
+}
+int cube(int *nPtr)
+{
+ *nPtr = *nPtr * *nPtr * *nPtr; // cube *nPtr
+}
