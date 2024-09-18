@@ -1,0 +1,35 @@
+//8.1 Find the digits of a number entered with the for loop
+#include<stdio.h>
+int basamak(int x)
+ {
+ int i;
+ for(i=1;i<=10;i++)
+ { if(x==0) break;
+ printf("%2d",x%10);
+ x=x/10;
+ }
+ }
+int main()
+{
+int number;
+ printf("Enter integer: "); // Enter integer: 123
+ scanf("%d", &number);
+ basamak(number); // 3 2 1
+}
+//8.2 Find the digits of a number entered with the recursive function
+#include<stdio.h>
+int basamak(int x)
+ {
+if(x<10)
+return x;
+else
+printf("%d ",x%10);
+return basamak(x/10); // recursive function
+ }
+int main()
+{
+int number;
+ printf("Enter integer: "); // Enter integer: 123
+ scanf("%d", &number);
+ printf("%d ", basamak(number)); // 3 2 1
+} 
