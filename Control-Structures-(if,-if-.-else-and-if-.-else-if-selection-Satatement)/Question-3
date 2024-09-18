@@ -1,0 +1,21 @@
+/*
+Q3: Write a program that detects whether the year entered by the user is a leap year.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int year;
+    printf("Enter a year: "); //Enter a year: 2018
+    scanf("%d", &year);
+    
+    if(year%4==0)
+    {
+        printf("Your year is a leap year"); //Enter a year: 2018
+    }
+    else
+    {
+        printf("Your year is not a leap year"); //Enter a year: 2017 - Your year is not a leap year
+    }
+}
