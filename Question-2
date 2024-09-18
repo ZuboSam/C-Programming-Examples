@@ -1,0 +1,25 @@
+/*
+Q2: Enter a three-digit positive number from the keyboard.
+ a) find the digits of the number
+ b) printing an average of one and a hundred steps on the screen.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+	int num;
+	float hundreds, tens, ones;
+
+	printf("Enter a three digit number: \n");
+	scanf("%d", &num);
+	hundreds = num / 100;
+	tens = (num / 10) % 10;
+	ones = num % 10;
+
+	printf("Your digits are \n %.0f \n %.0f \n %.0f \n", hundreds, tens, ones);
+	printf("Average of the ones and hundreds: %.2f", (hundreds + ones) / 2);
+
+	return 0;
+
+}
