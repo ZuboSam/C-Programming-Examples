@@ -1,0 +1,21 @@
+#include<stdio.h>
+int f(int x);
+int main ()
+{
+ int x;
+ printf("Enter number to: ");
+ scanf("%d",&x); // 8
+ printf("f(x) : %d",f(x)); //f(x) : 20
+ printf("\n");
+ return 0;
+}
+ int f(int x)
+ {
+ int i,tsum=0;
+ for(i=0;i<=x;i++)
+ {
+ if(!(i%2))
+tsum=tsum+i;
+ }
+ return tsum;
+ }
