@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main (void)
+{
+int x=1;
+// int total; error
+int total=0;
+while(x<=5)// loop 5 times
+ {
+ total+=x*x;// perform calculation
+ printf("%d*%d =%2d\n",x,x,x*x); // 1*1 = 1
+ ++x; // increment counter x // 2*2 = 4
+ } // end while // 3*3 = 9
+ printf("\nTotal is %d\n ",total); // 4*4 =16
+return 0; // 5*5 =25
+}
+ // Total=55
