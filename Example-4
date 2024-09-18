@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+int a=40,b=20, add,sub,mul,div,mod;
+ add = a+b;
+ sub = a-b;
+ mul = a*b;
+ div = a/b;
+ mod = a%b;
+ printf("Addition of a, b is : %d\n", add); // 60
+ printf("Subtraction of a, b is : %d\n", sub); // 20
+ printf("Multiplication of a, b is : %d\n", mul); // 800
+ printf("Division of a, b is : %d\n", div); // 2
+ printf("Modulus of a, b is : %d\n", mod); // 0
+ return 0;
+
+
+}
