@@ -1,0 +1,36 @@
+/*
+Q3: Write a program that prints asterisk (*) on the screen according to the value
+of the array element. 
+example:
+int main(void)
+{ int i,j;
+int n[SIZE] = {5, 7, 9, 11};
+Element Value Histogram
+   0      5     *****
+   1      7    *******
+   2      9   *********
+   3     11  ***********
+*/
+
+
+#include &lt;stdio.h&gt;
+#define size 4
+int main()
+{
+int array[size]={5,7,9,11};
+printf(&quot;Element Value Histogram \n&quot;);
+for(int i=0; i&lt;size; i++)
+{
+printf(&quot;%d&quot;, i);
+printf(&quot;%11d&quot;, array[i]);
+for(int n=9; n&gt;=array[i]-i; n--)
+{
+printf(&quot; &quot;);
+}
+for(int k=1; k&lt;=array[i];k++)
+{
+printf(&quot;*&quot;);
+}
+printf(&quot;\n&quot;);
+}
+}
