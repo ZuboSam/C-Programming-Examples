@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main ()
+{
+int x,y,sum=1;
+for(x=1;x<=3;x++)
+{
+for (y=1 ; y<=x; y++)
+{
+sum=sum*y;
+}
+printf("%d!= %d ",x,sum); // 1!=1
+sum=1; // 2!=2
+printf("\n"); // 3!=6
+}
+}
