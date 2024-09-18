@@ -1,0 +1,35 @@
+/*
+Q3: The user enters the coefficients of the 2nd degree equation from the main program. Find the
+roots of the equation in a single function and print it in the main program.
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+void coeff(float a, float b, float c, float *root1, float *root2)
+{
+
+*root1=(-b+sqrt(b*b-4*a*c))/2*a;
+*root2=(-b-sqrt(b*b-4*a*c))/2*a;
+
+}
+
+int main()
+{
+float a,b,c,root1,root2,d=0;
+while(d==0)
+{
+printf("Enter your 2nd degree equations coefficents (ax^2+bx+c): ");
+scanf("%f%f%f", &a,&b,&c);
+
+if(b*b-4*a*c<0)
+{
+printf("Your equation has no real roots.\n");
+}
+else
+{
+coeff(a,b,c,&root1,&root2);
+printf("Your roots are %.2f and %.2f\n", root1,root2);
+}
+}
+}
