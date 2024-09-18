@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int x=9,m=-9,s;
+int y=0,z=0,t=1,k=1;
+ x=sqrt(x);
+ s=sqrt(m); // !! m<0
+ printf(" x=%d\n",x); // x=3
+ printf(" s=%d\n\n ",s); // s=-2147483648
+ y=y+(++t); //
+ z=z+(k++); // !!
+ printf(" t=%d y=%d \n ",t,y); // t=2 y=2
+ printf(" k=%d z=%d \n\n ",k,z); // k=2 z=1
+return 0;
+}
