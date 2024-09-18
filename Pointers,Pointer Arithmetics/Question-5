@@ -1,0 +1,58 @@
+/*
+Q5: The number of rows and columns of two matrices and element values are entered by the user. In
+the functions, find the sum and difference of these matrices and print them in the main program.
+*/
+
+#include <stdio.h>
+void elements(int a[][100],int b[][100],int R,int C, int sum[][100],int diff[][100])
+{
+for(int i=0;i<R;i++)
+{
+for(int k=0;k<C;k++)
+{
+sum[i][k]=a[i][k]+b[i][k];
+diff[i][k]=a[i][k]-b[i][k];
+}
+}
+}
+int main()
+{
+int a[100][100],b[100][100],R,C,sum[100][100],diff[100][100];
+printf("Enter your arrays' row and column number: ");
+scanf("%d%d", &R, &C);
+for(int i=0;i<R;i++)
+{
+for(int k=0;k<C;k++)
+{
+printf("Enter your first arrays %d. rows %d. element: ", i+1,k+1);
+scanf("%d", &a[i][k]);
+}
+}
+for(int i=0;i<R;i++)
+{
+for(int k=0;k<C;k++)
+{
+printf("Enter your second arrays %d. rows %d. element: ", i+1,k+1);
+scanf("%d", &b[i][k]);
+}
+}
+elements(a,b,R,C,sum,diff);
+printf("Sum of two matrices:\n");
+for(int i=0;i<R;i++)
+{
+for(int k=0;k<C;k++)
+{
+printf("%2d ", sum[i][k]);
+}
+printf("\n");
+}
+printf("difference of two matrices:\n");
+for(int i=0;i<R;i++)
+{
+for(int k=0;k<C;k++)
+{
+printf("%2d", diff[i][k]);
+}
+printf("\n");
+}
+}
