@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+int i = 15;
+int *p;
+p = &i;
+printf("i =%d ", i); // i=15 p=00FAFDD0 *p=15
+printf("p =%p ", p);
+printf("*p=%d \n", *p);
+i = 50;
+printf("i =%d ", i); // i=50 p=00FAFDD0 *p=50
+printf("p =%p ", p);
+printf("*p=%d \n", *p);
+*p = 70;
+printf("i =%d ", i); // i=70 p=00FAFDD0 *p=70
+printf("p =%p ", p);
+printf("*p=%d \n", *p);
+
+}
