@@ -1,0 +1,16 @@
+#include<stdio.h>
+int f(int a); // prototype
+int main(void)
+{
+int a=2;
+printf(" a = %d \n",a); // a = 2
+printf(" f(a) = %d \n",f(a)); // f(a) = 4
+printf(" a = %d \n",a); // a = 2
+
+}
+int f(int a)
+{
+ a=a*a;
+ printf(" Function a = %d \n",a); //Function a=4
+return a;
+}
