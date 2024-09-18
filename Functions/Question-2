@@ -1,0 +1,26 @@
+/*
+Q2: Apply the cosine theorem for 2 sides 1 angle entered by the user, and write a program that
+displays the side lengths and the opposite angle in the function. (use the math.h library).
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+float cosinetheorem(float a, float b, float c)
+{
+float lenght,d;
+d=c*3.14/180;
+lenght=sqrt(a*a+b*b-(2*a*b*cos(d)));
+return lenght;
+}
+
+int main()
+{
+float a,b,c;
+printf(&quot;Please enter 2 lenghts:&quot;);
+scanf(&quot;%f%f&quot;, &amp;a,&amp;b);
+printf(&quot;And enter the angle between these lenghts: &quot;);
+scanf(&quot;%f&quot;, &amp;c);
+
+printf(&quot;Your third lenght is %.2f &quot;, cosinetheorem(a,b,c));
+}
