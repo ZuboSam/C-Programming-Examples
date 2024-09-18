@@ -1,0 +1,23 @@
+/*
+Q4:  Write a program that finds 2 different label prices of the product by adding 8% and 18% KDV to a
+product whose cost value is entered by the user.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+	float orijinalprice, eightpercent, eighteenpercent;
+
+	printf("Enter your pruducts original price: ");
+	scanf("%f", &orijinalprice);
+
+	eightpercent = (orijinalprice * 108) / 100;
+	eighteenpercent = (orijinalprice * 118) / 100;
+
+	printf("Your new price with %%8 KDV is= %.3f \n", eightpercent);
+	printf("Your new price with %%18 KDV is= %.3f \n", eighteenpercent);
+
+	return 0;
+
+}
