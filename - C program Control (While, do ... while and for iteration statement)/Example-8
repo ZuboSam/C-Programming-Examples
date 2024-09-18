@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main ()
+{
+int s,sum=1;
+for (s=1 ; s<=3; s++)
+{
+sum=sum*s;
+printf("sum= %d ",sum); // sum=1
+printf("\n"); // sum=2
+} // sum=6
+printf("3 != %d ",sum); // 3 !=6
+
+}
