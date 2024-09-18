@@ -1,0 +1,37 @@
+/*
+Q6: Assume the user inputs two integers from the keyboard. Find the totals of the odd numbers
+between these numbers in the function, and print total in the main program.
+*/
+
+#include &lt;stdio.h&gt;
+
+int oddfinder(int a, int b) {
+int sum = 0;
+if (a&gt;b)
+{
+int c;
+c=a;
+a=b;
+b=c;
+}
+for(int i=a;i&lt;=b;i++)
+{
+if (i % 2 != 0)
+sum=sum+i;
+}
+
+return sum;
+}
+
+int main()
+{
+int num1, num2;
+printf(&quot;Enter the first integer: &quot;);
+scanf(&quot;%d&quot;, &amp;num1);
+
+printf(&quot;Enter the second integer: &quot;);
+
+scanf(&quot;%d&quot;, &amp;num2);
+
+printf(&quot;Sum of odd numbers between your numbers %d\n&quot;, oddfinder(num1, num2));
+}
