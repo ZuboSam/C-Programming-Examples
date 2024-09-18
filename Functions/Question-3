@@ -1,0 +1,40 @@
+/*
+Write a program that takes midterm and final grades of 2 courses for 3 different students entered
+by the user, finds GPA of these students using GPA function for each student and prints it in the main
+program.
+*/
+
+#include &lt;stdio.h&gt;
+
+float gpa(float a, float b, float c, float d)
+{
+float avrg;
+avrg= (a+b+c+d)/4;
+
+return avrg;
+}
+
+int main()
+{
+float mid, fin, mid2, fin2, gradepointaverage;
+for(int i=1;i&lt;=3;i++)
+{
+printf(&quot;Please enter your %d. students midterm: &quot;, i);
+scanf(&quot;%f&quot;, &amp;mid);
+
+printf(&quot;Please enter your %d. students final: &quot;, i);
+scanf(&quot;%f&quot;, &amp;fin);
+
+printf(&quot;Please enter your %d. students 2nd lectures midterm: &quot;, i);
+scanf(&quot;%f&quot;, &amp;mid2);
+
+printf(&quot;Please enter your %d. students 2nd lectures final: &quot;, i);
+scanf(&quot;%f&quot;, &amp;fin2);
+
+gradepointaverage = gpa(mid,fin,mid2,fin2);
+
+printf(&quot;GPA is: %.3f \n&quot;, gradepointaverage);
+
+}
+
+}
