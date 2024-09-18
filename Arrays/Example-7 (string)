@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<ctype.h>
+#define SIZE 15
+int main(void)
+{
+char name[]="derYA";
+char surname[]="SaMANyolu";
+int i;
+printf("%s %s\n",name,surname); //derYA SaMANyolu
+for ( i = 0; i <SIZE&&name[i] != '\0'; ++i)
+ { name[i]=toupper(name[i]); }
+ printf("%s \n",name); // DERYA
+for ( i = 1; i <SIZE&&surname[i] != '\0'; ++i)
+ { surname[i]=tolower(surname[i]); }
+ printf("%s %s \n ",name,surname); // DERYA Samanyolu
+
+}
