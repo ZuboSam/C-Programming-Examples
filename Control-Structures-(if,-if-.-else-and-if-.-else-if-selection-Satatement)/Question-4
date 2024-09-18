@@ -1,0 +1,48 @@
+/*
+Q4: Write a program that sorts three integers entered by the user from lowest to greatest.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int num1,num2,num3;
+    printf("Enter 3 integer to rank them: "); //Enter 3 integer to rank them: 40 50 45
+    scanf("%d%d%d", &num1, &num2, &num3);
+    
+    if(num1>=num2 && num2>=num3)
+    {
+        printf("Sorted order is: %d < %d < %d", num3,num2,num1);
+    }
+        else if(num1>=num2 && num1<=num3)
+        {
+            printf("Sorted order is: %d < %d < %d", num2, num1,num3);
+        }
+         else if(num1>=num3 && num1<=num2)
+        {
+            printf("Sorted order is: %d < %d < %d", num3, num1,num2);
+        }
+        else if(num2>=num1 && num2<=num3)
+        {
+            printf("Sorted order is: %d < %d < %d", num1, num2, num3);
+        }
+        else if(num2>=num3 && num2<=num1)
+        {
+            printf("Sorted order is: %d < %d < %d", num3, num2, num1);
+        }
+        else if(num3>=num1 && num3<=num2)
+        {
+            printf("Sorted order is: %d < %d < %d", num1, num3, num2); //Sorted order is: 40 < 45 < 50
+        }
+         else if(num3>=num2 && num3<=num1)
+        {
+            printf("Sorted order is: %d < %d < %d", num2, num3, num1);
+        }
+        else if(num1<=num2 && num2<=num3)
+        {
+            printf("Sorted order is: %d < %d < %d", num1, num2,num3);
+        }
+        
+        return 0;
+        
+    }
