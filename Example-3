@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+ {
+int a=2,b=4,c;
+ printf("%d ",a); // 2 a=2
+ printf("a=%d\n",a);
+b=b*b;
+ printf( "b=%d\n\n",b); // b=16
+c=a+b;
+ printf( "c=%d\n",c); // c=18
+c=a*b+5;
+ printf( "c=%d\n",c); // c=37
+c=a+b/2;
+ printf( "c=%d\n",c); // c=10
+c=(a+b)/2;
+ printf( "c=%d\n",c); // c=9
+b=a;
+ printf("b=%d\n",b); // b=2
+
+return 0;
+}
