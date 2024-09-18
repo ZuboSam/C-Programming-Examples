@@ -1,0 +1,11 @@
+#include<stdio.h>
+void f(int *xPtr);
+int main(void)
+{
+ int y=5;
+ f(&y);
+ printf( "y : %d" ,y); // y=25
+
+}
+void f(int *xPtr)
+ { *xPtr = 25; } //void f(const int *xPtr); error: cannot modify a const object
