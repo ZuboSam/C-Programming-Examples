@@ -1,0 +1,42 @@
+/*
+Q7: The user enters the elements of an array with n elements. Write a program that creates a new
+array from the even elements of this array in the function and prints this array in the main program.
+*/
+
+#include <stdio.h>
+void even(int a[],int b[],int N, int *counter)
+{
+int k=0;
+for(int i=0;i<N;i++)
+{
+if(a[i]%2==0)
+{
+*counter=*counter+1;
+}
+}
+for(int i=0;i<N;i++)
+{
+if(a[i]%2==0)
+{
+b[k]=a[i];
+k++;
+}
+}
+}
+int main()
+{
+int a[100],b[100],N,counter=0;
+printf("Enter the number of elements in your array: ");
+scanf("%d",&N);
+for(int i=0;i<N;i++)
+{
+printf("Enter your %d.element of your array: ", i+1);
+scanf("%d", &a[i]);
+}
+even(a,b,N,&counter);
+printf("Your new array created with the even elements of your array is: \n");
+for(int i=0;i<counter;i++)
+{
+printf("%d ", b[i]);
+}
+}
