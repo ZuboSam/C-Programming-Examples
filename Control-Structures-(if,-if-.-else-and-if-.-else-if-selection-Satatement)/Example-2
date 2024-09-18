@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main( void )
+{
+int x;
+printf ( "Please enter a pozitive number is: " ); // Please enter a pozitive number is : 8
+scanf("%d",&x);
+if (x < 0);
+printf("Number negative :%d\n",x); // Number negatif : 8
+if (x > 0)
+printf("Number pozitive :%d\n",x); // Number pozitive :8
+
+return 0;
+} 
