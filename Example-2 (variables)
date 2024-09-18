@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+ {
+ int x;
+ float yy;
+ x=10/3;
+ yy=10/3;
+ printf("x=%d ",x); // x=3 yy=3.000000
+ printf("yy=%f\n\n",yy);
+
+ x=10./3;
+ yy=10./3;
+ printf("x=%d ",x); // x=3 yy=3.333333
+ printf("yy=%f\n",yy);
+ return 0;
+ }
