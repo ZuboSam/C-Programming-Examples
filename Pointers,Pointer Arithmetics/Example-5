@@ -1,0 +1,16 @@
+#include<stdio.h>
+//void f(int x); // Error
+int f(int x);
+int main()
+{
+ int y=5,s;
+ s=f(y);
+ printf(" s : %d " ,s); // s: 25
+
+}
+//void f(int x)//Error
+int f(int x)
+{
+ x = x*x;
+ return x;
+}
