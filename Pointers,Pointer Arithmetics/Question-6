@@ -1,0 +1,39 @@
+/*
+Q6: Write a program that sorts the elements of an array whose element number and values are
+entered by the user, from smallest to largest, and prints the resulting new array to the screen.
+*/
+
+#include <stdio.h>
+int sort(int a[], int N)
+{
+int temp;
+for(int i=0;i<N;i++)
+{
+for(int k=0;k<N-1;k++)
+{
+if(a[k+1]<a[k])
+{
+temp=a[k];
+a[k]=a[k+1];
+a[k+1]=temp;
+}
+}
+}
+}
+int main()
+{
+int a[100],N;
+printf("Enter elements of your array: ");
+scanf("%d", &N);
+for(int i=0;i<N;i++)
+{
+printf("Enter your %d. element of your array: ",i+1);
+scanf("%d", &a[i]);
+}
+sort(a,N);
+printf("Your sorted new array is: \n");
+for(int i=0;i<N;i++)
+{
+printf("%d ", a[i]);
+}
+}
