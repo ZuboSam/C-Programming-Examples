@@ -1,0 +1,35 @@
+/*
+Q4: Write a program that gives the following output:
+1    1
+ 1  1
+  11
+ 1  1
+1    1
+*/
+
+#include &lt;stdio.h&gt;
+#define size 5
+int main()
+{
+char a[size][size];
+for(int i=0;i&lt;size;i++)
+{
+for(int k=0;k&lt;size;k++)
+{
+a[i][k]= &#39; &#39;;
+}
+}
+for(int i=0;i&lt;size; i++)
+{
+a[i][i]= &#39;1&#39;;
+a[i][size-i-1]= &#39;1&#39;;
+}
+for(int i=0;i&lt;size;i++)
+{
+for(int k=0;k&lt;size;k++)
+{
+printf(&quot;%c &quot;,a[i][k]);
+}
+printf(&quot;\n&quot;);
+}
+}
