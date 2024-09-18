@@ -1,0 +1,25 @@
+/*
+Q6: Write the program that creates a 5-line pyramid using the * character.
+    *
+   ***
+  *****
+ ********
+**********
+
+*/
+
+
+#include &lt;stdio.h&gt;
+int main()
+{
+int satir = 5;
+for (int i = 1; i &lt;= satir; i++) {
+for (int bosluk = 1; bosluk &lt;= satir - i; bosluk++) {
+printf(&quot; &quot;);
+}
+for (int k = 1; k &lt;= 2 * i - 1; k++) {
+printf(&quot;*&quot;);
+}
+printf(&quot;\n&quot;);
+}
+}
