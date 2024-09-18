@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<ctype.h>
+#define SIZE 15
+int main()
+{
+char name[SIZE];
+char surname[SIZE];
+char num[SIZE];
+int control,i;
+do
+{ control=1;
+printf("Enter number : "); // Enter number : 161110*20
+ scanf("%s",num); // Enter number : 161110020
+for ( i = 0; i <SIZE&& num[i] != '\0'; ++i) {
+if(!isdigit(num[i])){
+ printf("You entered the wrong number %c not figure.Enter again. \n", num[i]);
+ //You entered the wrong number * not figure.Enter again.
+ control=0;
+ }
+ }
+}while(control==0);
+do
+{ control=1;
+printf("Enter name : "); // Enter name : Ahm9t
+ scanf("%s",name); // Enter name : Ahmet
+for ( i = 0; i <SIZE&& name[i] != '\0'; ++i) {
+if(!isalpha(name[i])){
+ printf("You entered the wrong %c not letter.Enter again. \n", name[i]);
+ //You entered the wrong number 9 not letter.Enter again.
+ control=0;
+ }
+ }
+}while(control==0);
+do
+{ control=1;
+ printf("Enter surname : "); // Enter surname : Dolun*ay
+ scanf("%s",surname); // Enter surname : Dolunay
+for ( i = 0; i <SIZE&& surname[i] != '\0'; ++i)
+ {
+if(!isalnum(surname[i]))
+ { printf("You have entered your last name incorrectly.%c not letter ,not a figure.
+Enter again. \n", surname[i]);
+//You have entered your last name incorrectly.* not letter ,not a figure. Enter again.
+ control=0;
+ }
+ }
+}while(control==0);
+printf(" Number Name Surname\n"); // Number Name Surname
+printf("%10s %10s %10s ",num,name,surname); // 161110020 Ahmet Dolunay
+
+
+}
