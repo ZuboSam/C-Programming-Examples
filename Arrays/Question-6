@@ -1,0 +1,41 @@
+/*
+Q6: Write two functions that find the largest and smallest elements of a one-dimensional N
+element array and a main program that you can use these functions.
+*/
+
+#include &lt;stdio.h&gt;
+int small(int a[])
+{
+int min;
+min=a[0];
+for(int i=0;i&lt;5;i++)
+{
+if (a[i]&lt;min)
+
+{
+min=a[i];
+}
+}
+return min;
+}
+
+int large(int a[])
+{
+int max;
+max=a[0];
+for(int i=0;i&lt;5;i++)
+{
+if (a[i]&gt;max)
+{
+max=a[i];
+}
+}
+return max;
+}
+
+int main()
+{
+int a[5]={4,8,11,2,1};
+printf(&quot;your smallest element of your array is: %d \n&quot;, small(a));
+printf(&quot;your biggest element of your array is: %d&quot;, large(a));
+}
