@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main ()
+{
+int i=0,k;
+printf( "1.for loop\n"); // 1.for loop
+for (k=4 ; k<3 ; k++)
+// {
+ printf("2.for loop ");
+for (i=2 ; i<8 ; i++)
+ {
+ i=i*2; // !
+ printf(" i=%d\t",i); // i=4 i=10 k=4
+ }
+printf("k=%d\n",k);
+// }
+printf( "\n3.for loop\n"); // 3.for loop
+
+for(i=0;k;i++) { k=i<3;
+ printf(" i=%d k=%d\n",i,k); // i=0 k=1
+ // i=1 k=1
+ } // i=2 k=1
+ // i=3 k=0
+ printf("\n");
+return 0;
+} 
