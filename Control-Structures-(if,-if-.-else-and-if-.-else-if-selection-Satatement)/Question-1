@@ -1,0 +1,23 @@
+/*
+Q1: The edge lengths of a triangle from the keyboard are entered.
+We write c program that prints the triangle on the screen (isosceles, equilateral, diverse)
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    float aside,bside,cside;
+    
+    printf("Enter your triangles edge lenghts: ");
+    scanf("%f%f%f", &aside,&bside,&cside);
+    
+    if(aside==bside && aside==cside)
+        printf("Your triangle is equilateral"); //Enter your triangles edge lenghts: 7 7 7 Your triangle is equilateral
+    else if(aside==bside || aside==cside || bside==cside)
+       printf("Your triangle is isoscales"); //Enter your triangles edge lenghts: 7 7 9 Your triangle is isoscales
+    else
+    printf("Your triangle is diverse"); //Enter your triangles edge lenghts: 7 8 9 Your triangle is diverse
+    
+    return 0;
+}
