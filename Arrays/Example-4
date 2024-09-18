@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define SIZE 5
+int whatIsThis(const int b[], int p); // function prototype
+int main(void)
+{
+int x;
+int a[SIZE] = { 1, 2, 3, 4, 5 };
+ x = whatIsThis(a, SIZE);
+ printf("Result is %d\n", x); // Result is 15
+}
+int whatIsThis(const int b[], int p)
+{ printf("p=%d ",p);
+// b[3]=40; Error (const int b[])
+if (p == 1)
+ {
+ printf("\n");
+return b[0];
+ }
+else
+ { printf("b[%d]=%d\n",(p-1),b[p-1]); // p=5 b[4]=5
+return b[p - 1] + whatIsThis(b, p - 1); // p=4 b[3]=4
+ // p=3 b[2]=3
+ } // p=2 b[1]=2
+ // p=1
+}
