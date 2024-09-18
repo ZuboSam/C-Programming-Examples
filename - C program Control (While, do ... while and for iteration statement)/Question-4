@@ -1,0 +1,56 @@
+/*
+Q4: Write a program that finds the combination of 2 entered positive numbers. If a negative number
+is entered, another number will be entered with the warning "You must enter a positive number."
+Enter a zero in one of the numbers to terminate the program.
+*/
+
+#include &lt;stdio.h&gt;
+int main()
+{
+int a,a1,b,b1,c,c1,f,e;
+e=1;
+while(e!=0)
+{
+printf(&quot;Please enter your first number (for exit press 0): &quot;);
+scanf(&quot;%d&quot;, &amp;a);
+if(a==0)
+{
+break;
+}
+if(a&lt;0)
+
+{
+printf(&quot; Please enter a positive number! \n&quot;);
+continue;
+}
+printf(&quot;Enter your second number (for exit press 0): &quot;);
+scanf(&quot;%d&quot;, &amp;b);
+if(b==0)
+{
+break;
+}
+if(b&lt;0)
+{
+printf(&quot; Please enter a positive number! \n&quot;);
+continue;
+}
+c=a-b;
+a1=1;
+b1=1;
+c1=1;
+for(int i=1;i&lt;=a;i++)
+{
+a1=a1*i;
+}
+for(int i=1;i&lt;=b;i++)
+{
+b1=b1*i;
+}
+for(int i=1;i&lt;=c;i++)
+{
+c1=c1*i;
+}
+f=a1/(b1*c1);
+printf(&quot;%d \n&quot;, f);
+}
+}
