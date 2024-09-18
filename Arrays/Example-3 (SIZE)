@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define SIZE 5
+int main()
+{ int j,total=0;
+int s[SIZE]; // array s has SIZE elements
+for ( j = 0; j <SIZE; ++j)
+ {
+ s[j] = 2 + 2 * j;
+total+=s[j];
+ }
+printf( "Element Value\n"); // Element Value
+ // s[0] = 2
+for ( j = 0; j <SIZE; ++j) // s[1] = 4
+{ // s[2] = 6
+ printf(" s[%d] = %3d\n", j, s[j]); // s[4] = 8
+ } // s[5] = 10
+printf("Total of array element values is %d\n", total);
+ // Total of array element values is 30
+
+}
