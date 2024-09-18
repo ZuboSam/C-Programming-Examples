@@ -1,0 +1,22 @@
+/*
+Q5: Write a program that finds the first 10 elements of the Fibonacci series using loops, finds the sum
+of these elements, and prints it on the screen.
+Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …
+*/
+
+#include &lt;stdio.h&gt;
+int main()
+{
+int a,b,sum;
+
+a=0;
+b=1;
+for(int i=1;i&lt;=5;i++)
+{
+b=b+a;
+a=a+b;
+printf(&quot;%d %d &quot;,b,a);
+sum=sum+a+b;
+}
+printf (&quot; sum is: %d&quot;, sum);
+}
