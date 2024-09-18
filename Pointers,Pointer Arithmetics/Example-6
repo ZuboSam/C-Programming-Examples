@@ -1,0 +1,18 @@
+#include<stdio.h>
+int carries_address (int a,int *b)
+{
+printf( "Function : &a=%p ",&a); //Function &a=0x7ffc9be4458c &b=0x7ffc9be445a4
+printf(" &b=%p \n\n",&(*b));
+a=a*3;
+*b=*b+30; // !! no return
+}
+int main(void)
+{
+int a=20,b=50;
+printf("main program : &a=%p ",&a) ; // main program &a=0x7ffc9be445a0 &b=0x7ffc9be445a4
+printf(" &b=%p \n\n",&b);
+carries_address (a,&b);
+printf("main program : a=%d ",a); //main program a= 20 b=80
+printf(" b=%d \n",b);
+
+}
