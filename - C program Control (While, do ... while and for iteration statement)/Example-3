@@ -1,0 +1,29 @@
+#include<stdio.h>// while and Do-While loop
+int main ()
+{
+int k=0,t;
+float x=20,y=3;
+while(k>0)
+ { printf("while loop \n"); // !
+ printf(" [1] Multiplication \n");
+ printf(" [2] Division\n");
+ k++;
+ }
+ printf("\ndid not enter while loop \n \n");
+
+ // did not enter while loop
+do
+ {printf(" do loop \n"); // do loop
+ printf(" [1] Multiplication\n"); // [1] Multiplication
+printf(" [2] Division \n"); // [2] Division
+printf(" Choice [1,2] :"); // Choice [1,2]:1
+ k++;
+scanf("%d",&t);
+ }
+while ( k!=1);
+if(t==1)
+ printf(" Mul=%.1f \n",x*y); // Mul:60.0
+if(t==2)
+ printf(" Div =%.1f\n",x/y);
+
+retur
