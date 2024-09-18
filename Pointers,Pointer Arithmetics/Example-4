@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(void)
+{
+ int x,y;
+ int * const ptr = &x;
+ *ptr = 10; // allowed: *ptr is not const
+ // ptr = &y; error: ptr is const; cannot assign new address
+printf( "*ptr : %d " ,*ptr); // *ptr : 10
+
+}
