@@ -1,0 +1,28 @@
+/*
+Q5: Write the program that finds the grade point average of two courses by entering the midterm
+and final grades of these courses by the user.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+	float midterm1, final1,midterm2,final2, avrg;
+	printf("Enter your first courses midterm grade: ");
+	scanf("%f", &midterm1);
+
+	printf("Enter your first courses final grade: ");
+	scanf("%f", &final1);
+	
+	printf("Enter your second courses midterm grade: ");
+	scanf("%f", &midterm2);
+	
+	printf("Enter your second courses final grade: ");
+	scanf("%f", &final2);
+
+	avrg = (midterm1 + final1+midterm2+final2) / 4;
+
+	printf("Your grade average is: %.2f \n", avrg);
+
+	return 0;
+}
