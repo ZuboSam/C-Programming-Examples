@@ -1,0 +1,33 @@
+/*
+Q7: Write a program that orders a one-dimensional N element array from small to large.
+*/
+
+#include &lt;stdio.h&gt;
+
+int sirala(int a[])
+{
+int temp;
+for(int i=0;i&lt;7;i++)
+{
+for(int k=0;k&lt;6-i;k++)
+{
+if(a[k]&gt;a[k+1])
+{
+temp=a[k];
+a[k]=a[k+1];
+a[k+1]=temp;
+}
+}
+}
+}
+
+int main()
+{
+int a[7]={1,8,45,12,35,28,4};
+sirala(a);
+printf(&quot;sorted elements of your array are: &quot;);
+for(int i=0;i&lt;7;i++)
+{
+printf(&quot;%2d &quot;, a[i]);
+}
+}
