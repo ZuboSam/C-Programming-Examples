@@ -1,0 +1,31 @@
+#include<stdio.h>
+int sumline(int matrix[][4], int vector[])
+{ int top,i,j;
+ for(i=0;i<3;i++)
+ {
+top=0;
+ for(j=0;j<4;j++)
+{ top+=matrix[i][j]; }
+ vector[i]=top;
+ }
+}
+int main()
+{
+ int i,j,vector[3];
+ int matrix[3][4]={1,2,3,4, 1,2,3,5, 1,2,3,6};
+printf(" Matrix ");
+
+ sumline(matrix,vector);
+for(i=0;i<3;i++)
+{
+printf("\n");
+ for(j=0;j<4;j++) // Matrix
+ { printf("%2d",matrix[i][j]);} // 1 2 3 4
+ // 1 2 3 5
+} // 1 2 3 6
+printf("\n\n Vector : ");
+ for(j=0;j<3;j++)
+{ printf("%2d ",vector[j]); } // Vector : 10 11 12
+printf("\n");
+
+}
