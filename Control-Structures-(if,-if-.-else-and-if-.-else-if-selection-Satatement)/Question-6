@@ -1,0 +1,27 @@
+/*
+Q6: Write a program that displays how many digits a maximum 3 digit number entered by the user is
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    printf("Enter a number up to 3 digits: "); //Enter a number up to 3 digits: 14
+    scanf("%d",&a);
+    
+    if(a<10)
+    {
+        printf("Your number has 1 digit");
+    }
+    else if (a>=10 && a<100)
+    {
+        printf("your number has 2 digits"); //your number has 2 digits
+    }
+    else if (a>=100 && a<1000)
+    {
+        printf("your number has 3 digits");
+    }
+    
+    return 0;
+}
