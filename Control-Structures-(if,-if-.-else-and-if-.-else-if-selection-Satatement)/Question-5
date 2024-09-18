@@ -1,0 +1,24 @@
+/*
+Q5: When the price of two products is entered on the keyboard, if the total price is more than 200 ₺,
+write a program that shows the amount to be paid by making a 25% discount on the second product.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    float pro1,pro2;
+    printf("Enter your products prices: "); //Enter your products prices: 40 140
+    scanf("%f%f", &pro1,&pro2);
+    
+    if((pro1+pro2)>200)
+    {
+        float new;
+        new= (pro2*75/100)+pro1;
+        printf("Because your total price is higher than 200 you have earned %%25 discount on your second product. Your new total is: %.3f",new); //Enter your products prices: 140 80 - Because your total price is higher than 200 you have earned %25 discount. Your new total is: 165.000
+    }
+    else 
+    printf("Your total is: %.2f", pro1+pro2); //Your total is: 180.00
+    
+    return 0;
+}
