@@ -1,0 +1,18 @@
+#include<stdio.h>
+int gizem(int x,int y );
+int main(void)
+{
+int number1,number2;
+ printf("Enter two integers: "); // Enter two integers:5 6
+ scanf("%d%d", &number1, &number2);
+ printf("Multiplication : %d\n", gizem(number1, number2));
+ //Multiplication:30 (5+5+5+5+5+5=30)
+
+}
+int gizem(int x, int y)
+ {
+if(y==1)
+return x;
+else
+return x+gizem(x,y-1); // Recursive function
+ }
