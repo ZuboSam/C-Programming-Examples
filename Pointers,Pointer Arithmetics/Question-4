@@ -1,0 +1,43 @@
+/*
+Q4: Create an array with n terms entered by the user. Find the maximum and minimum value of this
+array and the mean of the array in a single function and print it in the main program.
+*/
+
+#include <stdio.h>
+void array(int a[],int *min,int *max, float *mean,float N)
+{
+int minimum,maximum,sum;
+minimum=a[0];
+maximum=a[0];
+sum=0;
+for(int i=0;i<N;i++)
+{
+if(a[i]<minimum)
+{
+minimum=a[i];
+}
+if(a[i]>maximum)
+{
+ maximum=a[i];
+}
+sum=sum+a[i];
+}
+*min=minimum;
+*max=maximum;
+*mean=sum/N;
+}
+int main()
+{
+int a[100],min,max;
+float mean,N;
+printf("Enter your element number of your arrays: ");
+scanf("%f", &N);
+for(int i=0;i<N;i++)
+{
+printf("Enter your %d. element of your array: ", i+1);
+scanf("%d", &a[i]);
+}
+array(a,&min,&max,&mean,N);
+printf("Minimum element of your array is %d\nMaximum element of your array is
+%d\nMean of your array is %.2f", min,max,mean);
+}
