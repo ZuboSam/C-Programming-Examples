@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main ()
+{
+int x;
+for (x=0 ; x<=8; x++)
+ {
+if(x==2)
+ {
+continue;//skip remaining code in loop body
+ }
+if(x==6)
+ {
+break;//break loop only if x is 6
+ }
+ printf("x=%d ",x); // x=0 x=1 x=3 x=4 x=5
+}
+ printf("\n");
+
+} 
