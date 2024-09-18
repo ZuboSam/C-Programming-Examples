@@ -1,0 +1,24 @@
+#include<stdio.h>
+#define N 3
+int main()
+{
+int d[N] = {10,20,30};
+int i;
+printf("d 's address: %p, *d value at this address : %d\n", d, *d);
+
+printf(" &d[0] : %p, d[0] : %d\n\n", &d[0], d[0]);
+ //d 's address: 6487568, *d value at this address : 10
+ // &d[0]: 6487568, d[0] : 10
+printf("The first element of the array: %d\n\n", *(d+1)); //The first element of the array: 20
+printf("Array elements :"); //Array elements : 10 20 30
+for (i=0;i<N;i++)
+ printf("%d\t ", d[i]);
+printf("\nPointer values :"); //Pointer values: 10 20 30
+for (i=0;i<N;i++)
+ printf("%d\t ", *(d+i));
+printf("\n\nAddresses of array elements :");
+for (i=0;i<N;i++) //Addresses of array elements : 6487568 6487572 6487576
+ printf("%p ", (d+i));
+ printf("\n\n");
+
+}
