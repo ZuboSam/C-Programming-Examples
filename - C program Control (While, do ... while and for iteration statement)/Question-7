@@ -1,0 +1,58 @@
+/*
+An integer is entered from the main program. The entered number is the base character number
+of the triangle. Accordingly, write a program that prints triangle A if the number entered in the
+function is odd, and triangle B if it is even.
+ Triangle A    Triangle B
+    1              11
+   121            1221
+  12321          123321
+ 1234321        12344321
+
+*/
+
+#include &lt;stdio.h&gt;
+int main()
+{
+int sayi;
+printf(&quot;Enter a number: &quot;);
+scanf(&quot;%d&quot;, &amp;sayi);
+if(sayi%2==1)
+{
+
+for(int i=1;i&lt;=sayi;i++)
+{
+for(int k=1;k&lt;=sayi-i;k++)
+{
+printf(&quot; &quot;);
+}
+for(int m=1;m&lt;=i;m++)
+{
+printf(&quot;%d&quot;, m);
+}
+for(int l=i-1;l&gt;=1;l--)
+{
+printf(&quot;%d&quot;, l);
+}
+printf(&quot;\n&quot;);
+}
+}
+else
+{
+for(int i=1;i&lt;=sayi;i++)
+{
+for(int k=1;k&lt;=sayi-i;k++)
+{
+printf(&quot; &quot;);
+}
+for(int m=1;m&lt;=i;m++)
+{
+printf(&quot;%d&quot;, m);
+}
+for(int l=i;l&gt;=1;l--)
+{
+printf(&quot;%d&quot;, l);
+}
+printf(&quot;\n&quot;);
+}
+}
+}
