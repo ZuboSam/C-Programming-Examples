@@ -1,0 +1,15 @@
+#include<stdio.h>
+int cubeByValue(int n); // prototype
+int main()
+{
+int number = 5;
+ printf("The original value of number is %d", number);
+ // The original value of number is 5
+ number = cubeByValue(number);
+ printf("\nThe new value of number is %d\n", number);
+ // The new value of number is 125
+}
+int cubeByValue(int n)
+{
+ return n*n*n;
+}
