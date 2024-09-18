@@ -1,0 +1,63 @@
+/*
+Q7: In this question you are required to write 2 functions and a main program.
+- first function should compute factorial of a number,
+- second function should calculate the value of sin(x) and cos(x) by using formula:
+a) sin(x)=x-(x^3/x!)+(x^5/5!)-(x^7/7!)+...+(x^N/N!)     Assume N=11.
+b) cos(x)= 1-(x^2/2!)+(x^4/4!)-(x^6/6!)+...+(x^N/N!)    Assume N=12.
+Use your first function (factorial) and pow() library function (which is in math.h) in your sinus
+function.
+Note: in formula 𝒙 is in radian. Which means, it should be float or double.
+Use your first function (factorial) and pow() library function (which is in math.h) in your sinus
+function. 
+*/
+
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+float factorial(float n)
+{
+float fact = 1;
+for (int i = 1; i &lt;= n; i++)
+{
+fact = fact * i;
+}
+return fact;
+}
+
+float trigonsin(float x)
+{
+x = x * M_PI / 180.0;
+float si = 0, sign = 1;
+for (int i = 1; i &lt;= 11; i = i + 2)
+{
+si = si + sign * pow(x, i) / factorial(i);
+sign = sign * -1;
+}
+
+return si;
+}
+
+float trigoncos(float x)
+{
+x = x * M_PI / 180.0;
+float co = 0, sign=1;
+
+for (int i = 0; i &lt; 14; i = i + 2) {
+co = co + sign * pow(x, i) / factorial(i);
+sign = sign * -1;
+}
+
+return co;
+}
+
+int main()
+{
+int n;
+printf(&quot;Enter your x value: &quot;);
+scanf(&quot;%d&quot;, &amp;n);
+
+printf(&quot;your sin(x) value is %f \n&quot;, trigonsin(n));
+printf(&quot;your cos(x) value is %f&quot;, trigoncos(n));
+
+}
