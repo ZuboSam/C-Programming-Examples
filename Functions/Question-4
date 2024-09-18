@@ -1,0 +1,54 @@
+/*
+Q4: Write a program that finds whether a number entered by the user is prime in the 1st function, prints
+it in the main program if it is prime, and if the number is not prime, finds the sum of its factors in the
+2nd function and prints it in the main program. (The program will terminate when the number zero is
+entered.)
+*/
+
+#include &lt;stdio.h&gt;
+
+int prime(int a)
+{
+int counter = 1;
+for (int i = 2; i &lt; a; i++)
+{
+if (a % i == 0)
+counter++;
+
+}
+if (counter == 1)
+return a;
+
+}
+
+int notprime(int a)
+{
+
+int sum=0;
+for (int i = 1; i &lt;= a; i++)
+{
+if (a % i == 0)
+{
+sum = sum + i;
+}
+}
+return sum;
+}
+
+int main()
+{
+int num,k=1;
+while (k = 1)
+{
+printf(&quot;Please enter a number (0 to terminate): &quot;);
+scanf(&quot;%d&quot;, &amp;num);
+if (num == 0)
+break;
+if (prime(num) == 0)
+printf(&quot;Your number is a prime number. \n&quot;);
+else
+printf(&quot;Your number is not prime. Sum of its factors is: %d \n&quot;,
+
+notprime(num));
+}
+}
