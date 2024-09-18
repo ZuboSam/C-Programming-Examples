@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main( void )
+{
+int num=7;
+if(num%2==1) //What is the result if if (number% 2) is replaced by if (number% 2 == 1)?
+
+{
+printf( " * %d odd number \n " ,num); //* 7 odd number
+}
+else
+ printf(" * %d even number . ",num);
+ printf(" %d even number !!.\n\n",num ); // 7 even number !!. Attention: {} no parentheses
+if(num%2==1)
+{
+ printf( " ** %d odd number." ,num); //** 7 odd number.
+ }
+else
+{
+printf(" *** %d ",num);
+printf( " even number. " ); // Attention: {} parentheses
+}
+return 0;
+
+} 
