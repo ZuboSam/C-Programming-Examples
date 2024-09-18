@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+int a=0,b=5;
+ a++;
+if(a>0)
+ {
+int b;
+ b=a+7;
+ printf("b=%d\n",b); // b=8
+ }
+ b=b-2;
+ printf("b=%d !!\n",b); // b=3 !!
+
+}
