@@ -1,0 +1,28 @@
+/*
+Q7: Write a program that finds the arithmetic and geometric mean of two numbers entered by the
+user and rounds these values to an integer.
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int num1, num2, avrg, geoavrg;
+
+	printf("Enter your first number: ");
+	scanf("%d", &num1);
+
+	printf("Enter your second number: ");
+	scanf("%d", &num2);
+
+	avrg = (num1 + num2) / 2;
+	geoavrg = sqrt(num1 * num2);
+
+	printf("Your 2 numbers arithmetic average is: %d \n", avrg);
+	printf("Your 2 numbers geometric average is: %d \n", geoavrg);
+
+	return 0;
+
+
+}
