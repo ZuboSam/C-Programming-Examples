@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main( void )
+{
+int number1; // first integer entered by the user
+int number2; // second integer entered by the user
+int number3,number4;
+ printf( "Enter two integers: "); // Enter two integer :16 3
+ scanf("%d%d", &number1, &number2);
+number3=number1>>2;
+number4=number2<<3;
+ printf("number3=%d\n", number3); // number3=4
+ printf("number4=%d ", number4); // number4=24
+return 0;
+}
