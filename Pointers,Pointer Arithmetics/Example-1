@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+int i=24;
+int *p;
+p = &i;
+printf(" i : %d\n", i); // i=24
+printf("*p : %d\n\n", *p); // *p=24
+printf("i's address &i : %p\n",&i); // i's address &i = 00EFFD54
+printf("p's address p : %p\n",p); // p's address p = 00EFFD54
+
+}
