@@ -1,0 +1,28 @@
+/*
+Q3: The factorial of a nonnegatif integer n is written as n!
+a) Write a program that estimates the value of the mathematical constant e by
+ using the formula:
+e= 1+(1/1!)+(1/2!)+...+(1/N!)      e= ~2.71
+b) Write a program that computers the value of e^x
+by using formula:
+e^x=1+x+(x^2/2!)+(x^3/3!)+...+(x^N/N!) 
+Note: 𝑎^𝑏 = 𝑝𝑜𝑤(𝑎, 𝑏)
+*/
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+int main()
+{
+float a,b,c,i;
+a=1;
+b=1;
+for(i=1;i&lt;100;i++)
+{
+a=a*i;
+b=b+1/a;
+}
+printf(&quot;e is = %.3f \n&quot;,b);
+float g;
+printf(&quot;Enter a value for calculating e power of x: &quot;);
+scanf(&quot;%f&quot;, &amp;g);
+printf(&quot;Answer is: %.3f&quot;, pow(b,g));
+}
