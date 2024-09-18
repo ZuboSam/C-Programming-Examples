@@ -1,0 +1,38 @@
+# include<stdio.h>
+ int f(int y);
+ int Array( int b[]);
+// int f(const int y);
+// int ArrayConstant(const int b[]);
+int main(void)
+{ int i,y=50;
+int a[3] = { 10, 20, 30 };
+ printf (" y = %d ",y); // y = 50 a[0]=10 a[1]=20 a[2]=30
+for(i=0;i<3;i++)
+ { printf("a[%d] =%d ",i, a[i]);}
+ printf("\n");
+ printf ("\nf(y)= %d ",f(y)); // f(y) = 100 a[0]=12 a[1]=18 a[2]=60
+ Array(a);
+for(i=0;i<3;i++)
+ { printf("a[%d] =%d ",i, a[i]);}
+
+}
+int f( int y)
+{ y=y*2;
+return y;}
+int Array( int b[])
+{
+b[0]+= 2;
+b[1]-= 2;
+b[2]*= 2;
+}
+/*
+int f(const int y)
+{ y=y*2; error
+ return y;}
+int ArrayConstant(const int b[])
+{
+ b[0]+= 2; error
+ b[1]-= 2; error
+ b[2]*= 2; error
+}
+*/
