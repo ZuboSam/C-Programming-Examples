@@ -1,0 +1,19 @@
+/*
+Q1: Write a program that finds the average of the elements of an array.
+*/
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+int a[5],sum=0;
+float avrg;
+for(int i=0; i&lt;5; i++)
+{
+printf(&quot;Enter your %d . element of your array &quot; , i+1);
+scanf(&quot;%d&quot;, &amp;a[i]);
+sum=sum+a[i];
+}
+avrg=sum/5;
+printf(&quot;your arrays elements&#39; average is: %.2f&quot;, avrg);
+}
