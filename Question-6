@@ -1,0 +1,23 @@
+/*
+Q6: Write a program to find the perimeter and area of a circle whose radius is entered by the user
+*/
+
+#include <stdio.h>
+
+int main()
+{
+	float perimeter, area, radius, pi;
+
+	printf("For calculating area and perimeter of a circle please enter a radius(pi is:3.14): ");
+	scanf("%f", &radius);
+
+	pi = 3.14;
+	perimeter = 2 * pi * radius;
+	area = pi * radius * radius;
+
+	printf("Your circles perimeter is: %.3f \n", perimeter);
+	printf("Your circles area is: %.3f \n", area);
+
+	return 0;
+
+}
