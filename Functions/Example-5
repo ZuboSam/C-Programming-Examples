@@ -1,0 +1,19 @@
+#include<stdio.h>
+float fuc(float a, float b)
+{
+a = a + 1;
+b = b + 2;
+printf(" 2 a=%.3f b=%.3f\n",a,b); // 2 a=2.000 b=4.000
+ // 2 a=1.500 b=4.000
+return a/b;
+}
+int main()
+{
+float a=1.0, b=2.0;
+ printf("1 a=%.3f b=%.3f\n",a,b); // 1 a=1.000 b=2.000
+ a=fuc(a,b);
+ printf("3 a=%.3f b=%.3f\n",a,b); // 3 a=0.500 b= 2.000
+ b=fuc(a,b);
+ printf("4 a=%.3f b=%.3f\n",a,b); // 4 a=0.500 b= 0.375
+
+}
